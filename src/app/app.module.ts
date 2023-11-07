@@ -3,16 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+
 
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [ //composants du module
+    AppComponent,
+    FirstComponent,
+    SecondComponent
   ],
-  imports: [
+  imports: [ //importer des modules externes
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [], //Définir la portée des services, définir des intercepteurs...
+  bootstrap: [AppComponent] //Composant à charger par défaut
 })
 export class AppModule { }
